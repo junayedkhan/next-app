@@ -21,7 +21,7 @@ export default function Home({user}) {
 }
 
 export const getServerSideProps = async() => {
-  const res = await fetch(`http://localhost:3000/api/mobile`)
+  const res = await fetch(`https://next-app-next.herokuapp.com/api/mobile`)
   const user = await res.json()
 
   return{
