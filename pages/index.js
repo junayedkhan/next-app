@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import baseUrl from "../mongoose/config/baseUrl"
 import styles from '../styles/Home.module.css'
 
 export default function Home({user}) {
@@ -21,7 +22,7 @@ export default function Home({user}) {
 }
 
 export const getServerSideProps = async() => {
-  const res = await fetch(`https://next-app-next.herokuapp.com/api/mobile`)
+  const res = await fetch(`${baseUrl}/api/mobile`)
   const user = await res.json()
 
   return{
