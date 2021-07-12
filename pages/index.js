@@ -55,7 +55,7 @@ export default function Home({products}) {
       </section>
       
       <section>
-        
+
       </section>
 
 
@@ -64,7 +64,7 @@ export default function Home({products}) {
 }
 
 export const getServerSideProps = async() => {
-  const res = await fetch(`${baseUrl}/api/products`)
+  const res = await fetch(`http://localhost:3000/api/products`)
   const products = await res.json()
 
   return{
