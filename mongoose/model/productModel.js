@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
-const mobile_schema = new mongoose.Schema({
-    title: {
+const product_schema = new mongoose.Schema({
+    name: {
         type: String,
         trim: true
     },
@@ -9,10 +9,10 @@ const mobile_schema = new mongoose.Schema({
         type: String,
         trim: true
     },
-    category: {
+    brand: {
         type: String,
         trim: true
     }
 }, {timestamps: true})
 
-module.exports = mongoose.models.mobileModel || mongoose.model('mobileModel', mobile_schema);
+module.exports = mongoose.models.productModel || mongoose.model('productModel', product_schema);

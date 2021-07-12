@@ -1,25 +1,30 @@
 .header{
-    background: #fff;
     z-index: 1000 !important;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
+    left: 0;
+}
+
+#active{
+    background: #222;
 }
 
 .navlogo {
     font-size: 1.6rem;
     font-weight: 500;
-    color: #444;
+    color: #fff;
 }
 
 .navlogo:hover{
-    color: #444;
+    color: #fff;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.8rem 0;
+    padding: 1rem;
 }
 
 .hamburger {
@@ -35,7 +40,7 @@
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #444;
+    background-color: #fff;
 }
 
 .navmenu {
@@ -54,14 +59,14 @@
     font-size: 1.1rem;
     font-weight: 400;
     font-weight: 700;
-    color: #444;
+    color: #fff;
     text-transform: uppercase;
     padding: 8px 10px;
     border-radius: 5px;
 }
 
 .navlink:hover{
-    color: #444;
+    color: #f9f9f9
 }
 
 
@@ -69,10 +74,12 @@
     .navmenu {
         position: fixed;
         left: -100%;
-        top: 6.2rem;
+        top:0;
         flex-direction: column;
-        background: #fff;
+        background: #222;
         width: 100%;
+        padding-top: 80px;
+        padding-bottom: 20px;
         text-align: center;
         transition: 0.3s;
     }
@@ -88,6 +95,7 @@
     .hamburger {
         display: block;
         cursor: pointer;
+        z-index: 1000;
     }
 
     .hamburger.active .bar:nth-child(2) {
