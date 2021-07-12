@@ -53,7 +53,10 @@ export default function Home({products}) {
           </div>
         </div>
       </section>
-
+      
+      <section>
+        
+      </section>
 
 
     </>
